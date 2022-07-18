@@ -12,8 +12,6 @@ const styles = StyleSheet.create({
     loginText: {
       marginTop: 16,
       paddingVertical: 4,
-     // borderWidth: 4,
-     // borderColor: "#20232a",
       borderRadius: 2,
       backgroundColor: "#66CDAA",
       color: "#FFFAFA",
