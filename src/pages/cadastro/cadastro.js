@@ -55,27 +55,3 @@ export function Cadastro({ navigation }) {
         </View>
     )
 }
-
-
-
-/*
-import React from 'react';
-import { View, Text, Button } from 'react-native';
-
-
-const Cadastro = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Cadastre-se</Text>
-    <Button 
-      title="Ir a Home"
-      onPress={() => navigation.navigate('Home') }
-    />
-  </View>
-);
-
-Cadastro.navigationOptions = {
-  title: 'Cadastro',
-}
-
-export default Cadastro;
-*/
