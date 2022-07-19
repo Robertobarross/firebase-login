@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import {
-    View,
-    Text,
-    TextInput,
-    Button
-} from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import styles from "../cadastro/style";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../components/firebase';
+import { Button } from "react-native-elements";
 
 export function Cadastro({ navigation }) {
     const [email, setEmail] = useState('');
@@ -26,23 +22,26 @@ export function Cadastro({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text>FAZER CADASTRO</Text>
+            <Text style={styles.cadastroText}>FAZER CADASTRO</Text>
             <TextInput 
-              placeholder="Email"
+              placeholder="email"
               placeholderTextColor="#313131"
               value={email}
               onChangeText={value => setEmail(value)}
               style={styles.input}
             />
             <TextInput 
-              placeholder="Senha"
+              placeholder="cadastre senha com 6 carecteres"
               placeholderTextColor="#313131"
               value={password}
               onChangeText={value => setPassword(value)}
               style={styles.input}
+              maxLength={6}
+              secureTextEntry={true}
             />
 
-            <Button 
+            <Button
+              buttonStyle={styles.button} 
               title="CADASTRAR"
               onPress={() => createUser()}
             />
