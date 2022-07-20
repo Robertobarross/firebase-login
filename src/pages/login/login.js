@@ -18,7 +18,7 @@ export function Login({navigation}) {
             alert('Logado com sucesso,bem vindo!');
           }
       })
-      .catch(error => console.log(error));
+      .catch(error => console.log(error,(alert('Email ou senha incorretos!'))));
   };
 
      async function logout() {
