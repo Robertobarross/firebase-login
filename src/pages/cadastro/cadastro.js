@@ -17,7 +17,7 @@ export function Cadastro({ navigation }) {
               alert('Cadastro criado com sucesso');
             }
           })
-        .catch(error => console.log(error));
+        .catch(error => console.log(error,(alert('Digite um email válido e senha com 6 digitos'))));
     };
 
     return (
